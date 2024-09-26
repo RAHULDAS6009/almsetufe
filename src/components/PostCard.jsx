@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";  
 import like from "../assets/like.svg"; 
-import shareIcon from "../assets/shareicon.svg"; 
+import shareIcon from "../assets/shareIcon.svg"; 
 import commentIcon from "../assets/comment.svg"; 
 import saveIcon from "../assets/saveicon.svg";  
 
