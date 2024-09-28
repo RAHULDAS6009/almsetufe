@@ -106,10 +106,10 @@ const LoginPage = () => {
               </div>
               <div>
                 <Link
-                  to="/register"
-                  className="text-blue-500 hover:underline   "
+                  to="/forgot-password"
+                  className="text-blue-500 hover:underline"
                 >
-                  Register
+                  Forgot your password?
                 </Link>
               </div>
               {loader && (
@@ -133,17 +133,11 @@ const LoginPage = () => {
                   <span class="sr-only">Loading...</span>
                 </div>
               )}
-              <button
-                onClick={() => {
-                  setEmail("rohan.sharma@gmail.com");
-                  setPassword("1234567");
-                }}
-                className="bg-slate-500 rounded-lg py-2 px-2 text-white w-full"
-              >
-                Get guest credentials
-              </button>
-
-             
+              <div className="flex flex-col bg-slate-500 text-sm rounded-lg py-2 px-2 text-white w-full">
+                <div>Demo user</div>
+                <div>Email : rohan.sharma@gmail.com</div>
+                <div>Password : 1234567</div>
+              </div>
 
               <button
                 type="submit"
@@ -154,11 +148,12 @@ const LoginPage = () => {
 
               <div className="text-sm font-medium text-gray-900 flex justify-between">
                 <Link
-                  to="/forgot-password"
-                  className="text-blue-500 hover:underline"
+                  to="/register"
+                  className="text-blue-500 hover:underline text-sm  "
                 >
-                  Forgot your password?
+                  Register
                 </Link>
+
                 <div className="text-sm font-medium text-gray-900">
                   <Link
                     to="/admin/login"
