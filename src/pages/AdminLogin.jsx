@@ -23,7 +23,7 @@ const AdminLogin = () => {
       console.log("Logged in with:", { role, email, password });
 
       try {
-        setMessage("Please wait...");
+        setMessage("Please wait it might takes longer time...");
         const response = await axios.post(`${API}/admin/login`, {
           role,
           email,
