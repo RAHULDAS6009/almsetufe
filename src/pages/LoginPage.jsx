@@ -7,7 +7,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
-  const [loader, setLoader] = useState();
+
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
 
@@ -22,7 +22,7 @@ const LoginPage = () => {
       console.log("Logged in with:", { email, password });
 
       try {
-        setLoader(true);
+        setMessage("Please wait it might takes longer time...");
         const response = await axios.post(`${API}/users/login`, {
           email,
           password,
@@ -112,9 +112,9 @@ const LoginPage = () => {
                   Forgot your password?
                 </Link>
               </div>
-              {loader && (
+              {message && (
                 <div className="text-red-600">
-                  Please wait it might take some time....
+                  {message}
                 </div>
               )}
               <div className="flex flex-col bg-slate-500 text-sm rounded-lg py-2 px-2 text-white w-full">
