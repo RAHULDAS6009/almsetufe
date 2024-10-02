@@ -27,7 +27,7 @@ const LoginPage = () => {
           email,
           password,
         });
-        setLoader(false);
+       
         setMessage("");
         console.log(response.data.message);
         navigate("/users/home");
