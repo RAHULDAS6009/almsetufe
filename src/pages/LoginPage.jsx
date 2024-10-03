@@ -27,9 +27,10 @@ const LoginPage = () => {
           email,
           password,
         });
+       console.log("Hello World");
        
         setMessage("");
-        console.log(response.data.message);
+        console.log(response);
         navigate("/users/home");
       } catch (error) {
         setMessage(error.response.data.message);
