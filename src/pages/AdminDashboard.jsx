@@ -59,7 +59,7 @@ const AdminDashboard = () => {
         await axios.delete(`${API}/admin/reject-user/${selectedUserId}`);
         setMessage("User Rejected");
       } else if (actionType === "delete") {
-        await axios.delete(`${API}/admin/delete-user/${selectedUserId}`);
+        await axios.delete(`${API}/admin/reject-user/${selectedUserId}`);
         setMessage("User Deleted");
       }
     } catch (error) {

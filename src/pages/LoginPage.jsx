@@ -23,16 +23,18 @@ const LoginPage = () => {
 
       try {
         setMessage("Please wait it might takes longer time...");
+       console.log("Hello World1");
+
         const response = await axios.post(`${API}/users/login`, {
           email,
           password,
         });
-       console.log("Hello World");
+       console.log("Hello World2");
        
         setMessage("");
-        console.log(response);
         navigate("/users/home");
       } catch (error) {
+        console.log("hello world3");
         setMessage(error.response.data.message);
         console.log(error);
       }
