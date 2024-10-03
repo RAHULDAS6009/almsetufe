@@ -23,7 +23,7 @@ const AdminLogin = () => {
       console.log("Logged in with:", { role, email, password });
 
       try {
-        setMessage("Please wait it might takes longer time...");
+        setMessage("Please wait it might take time...");
         const response = await axios.post(`${API}/admin/login`, {
           role,
           email,
@@ -139,15 +139,14 @@ const AdminLogin = () => {
 
               {message && <p className="text-red-500 text-center">{message}</p>}
               <div>
-              <Link
+                <Link
                   to="/forgot-password"
                   className="text-blue-500 hover:underline"
                 >
                   Forgot your password?
                 </Link>
-            
-                  </div>
-                  <div className="flex flex-col bg-slate-500 text-sm rounded-lg py-2 px-2 text-white w-full">
+              </div>
+              <div className="flex flex-col bg-slate-500 text-sm rounded-lg py-2 px-2 text-white w-full">
                 <div>Demo user</div>
                 <div>Role : Admin</div>
                 <div>Email : one@gmail.com</div>
@@ -161,11 +160,8 @@ const AdminLogin = () => {
               </button>
 
               <div className="flex w-full justify-end text-sm font-medium text-gray-900">
-              <Link
-                  to="/login"
-                  className="text-blue-500 hover:underline"
-                  >
-                  Login as user 
+                <Link to="/login" className="text-blue-500 hover:underline">
+                  Login as user
                 </Link>
 
                 {/* <Link

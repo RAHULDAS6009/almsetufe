@@ -19,20 +19,17 @@ const LoginPage = () => {
     if (!password) errors.password = "Password is required.";
     setErrors(errors);
     if (Object.keys(errors).length === 0) {
-
       try {
-        setMessage("Please wait it might takes longer time...");
-       console.log("Hello World1");
+        setMessage("Please wait it might take time...");
 
-        const response = await axios.post(`${API}/users/login`, {
+        await axios.post(`${API}/users/login`, {
           email,
           password,
         });
-       
+
         setMessage("");
         navigate("/users/home");
       } catch (error) {
-       
         setMessage(error.response.data.message);
         console.log(error);
       }
@@ -113,9 +110,7 @@ const LoginPage = () => {
                 </Link>
               </div>
               {message && (
-                <div className="text-red-600">
-                  {message}
-                </div>
+                <div className="text-red-600 text-center">{message}</div>
               )}
               <div className="flex flex-col bg-slate-500 text-sm rounded-lg py-2 px-2 text-white w-full">
                 <div>Demo user</div>
