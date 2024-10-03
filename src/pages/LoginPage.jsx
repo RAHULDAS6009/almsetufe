@@ -19,7 +19,6 @@ const LoginPage = () => {
     if (!password) errors.password = "Password is required.";
     setErrors(errors);
     if (Object.keys(errors).length === 0) {
-      console.log("Logged in with:", { email, password });
 
       try {
         setMessage("Please wait it might takes longer time...");
@@ -29,16 +28,14 @@ const LoginPage = () => {
           email,
           password,
         });
-       console.log("Hello World2");
        
         setMessage("");
         navigate("/users/home");
       } catch (error) {
-        console.log("hello world3");
+       
         setMessage(error.response.data.message);
         console.log(error);
       }
-      // Handle login here
     }
   };
 
