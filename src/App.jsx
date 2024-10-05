@@ -43,7 +43,7 @@ function AdminLayout() {
   }, [navigate]);
 
   return (
-    <div className="flex bg-[#ECF7FE] overflow-hidden w-full h-screen">
+    <div className="flex bg-[#ECF7FE] w-full h-screen">
       <SideBar />
       <div className="w-full p-2 px-10">
         <SearchBar showProfile={true} showSearch={false} dropDown={false} />
@@ -127,7 +127,7 @@ function UserLayout() {
                 path="/chats"
                 element={<ChatPage loggedInUser={loggedInUser} />}
               />
-              {/* <Route
+                  {/* <Route
                 path="/connections"
                 element={<ConnectionsPage loggedInUser={loggedInUser} />}
               /> */}
