@@ -45,7 +45,7 @@ function AdminLayout() {
   return (
     <div className="flex bg-[#ECF7FE] w-full h-screen">
       <SideBar />
-      <div className="w-full p-2 px-10">
+      <div className="w-full p-2 h-full px-10">
         <SearchBar showProfile={true} showSearch={false} dropDown={false} />
         <Routes>
           <Route

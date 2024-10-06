@@ -71,7 +71,7 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="w-full py-10 h-screen overflow-hidden relative">
+    <div className="w-full py-10  h-[85%]  relative">
     <div className="flex justify-center gap-20 max-xl:gap-8">
       {/* Render Tab Buttons */}
       {AdminApprovalsTab.map((tabLabel, index) => (
@@ -82,7 +82,7 @@ const AdminDashboard = () => {
     </div>
   
     {/* Display Table component based on selected tab */}
-    <div className="max-h-full overflow-auto">
+    <div className="h-full ">
       <Table
         title={selectedTab}
         users={users}

@@ -5,7 +5,7 @@ import TableRow from "./TableRow";
 
 const Table = ({ title, users, onApprove, onReject, message }) => {
   return (
-    <div className="mt-5 px-4 lg:px-10 border-2 border-black rounded-2xl h-[480px] 2xl:h-[700px] relative">
+    <div className="mt-5 px-4 lg:px-10 border-2 border-black  rounded-2xl h-[95%] overflow-x-hidden relative overflow-y-auto">
       <FilterAndSearch />
       <div className="mt-20 overflow-y-auto max-h-[calc(100vh-150px)] lg:max-h-screen scrollbar-custom pr-2">
         {message && <p className="text-blue-500 text-center">{message}</p>}
