@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/api/v1/(.*)",
-            "destination": "https://almasetu.onrender.com/api/v1/$1"
+            "destination": "https://almasetuserver.onrender.com/api/v1/$1"
         }
     ]
 }
